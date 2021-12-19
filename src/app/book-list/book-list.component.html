@@ -1,0 +1,26 @@
+<section class="books">
+  <table class="books__table">
+    <thead class="books__head">
+      <tr class="books__row">
+        <th class="books__head-name">#</th>
+        <th class="books__head-name">Title</th>
+        <th class="books__head-name">Price</th>
+        <th class="books__head-name">Buy</th>
+      </tr>
+    </thead>
+    <tbody class="books__body">
+      <tr class="book" *ngFor="let book of booksService.books; let i = index">
+        <td class="book__position">{{i + 1}}</td>
+        <td class="book__info">
+          <img class="book__image" src={{book.image}}/>
+          <div class="book__about">
+            <h2 class="book__title">{{book.title}}</h2>
+            <p class="book__description">{{book.subtitle}}</p>
+          </div>
+        </td>
+        <td class="book__price">{{book.price}}</td>
+        <td class="book__btn-cell"><button class="book__btn book__btn_isSelected"></button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
