@@ -21,6 +21,7 @@ export interface BookList {
 export class BookListService {
   public books: Book[] = []
   public selectedBooks: Book[] = []
+  public total: number = 0
 
   constructor (private http: HttpClient) {}
 
@@ -48,6 +49,12 @@ export class BookListService {
     } else {
       this.removeBook(isbn13)
     }
+  }
+
+  getSum() {
+    this.selectedBooks.forEach(book => {
+      return this.total = parseFloat((this.total + Number(book.price.slice(1))).toFixed(2))
+    })
   }
 
   sortArray(a: Book, b: Book) {

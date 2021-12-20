@@ -11,6 +11,8 @@ export class ShopComponent implements OnInit {
 
   constructor(public booksService: BookListService) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.booksService.getSum();
+  }
 
 }
