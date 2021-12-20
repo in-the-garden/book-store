@@ -1,3 +1,15 @@
 .main__search {
   margin-left: 40px;
+  border: none;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(182, 154, 204);
+  font-size: 16px;
+  line-height: 18px;
+  padding-bottom: 2px;
+  transition: border-bottom 1s ease-in;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
 }

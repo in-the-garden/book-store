@@ -50,6 +50,10 @@
     border: none;
     padding: 0;
     object-fit: cover;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__title {
@@ -127,6 +131,12 @@
     background-image: url('../../assets/images/add-btn.svg');
     background-position: center;
     background-repeat: no-repeat;
+    transition: opacity 1s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
+    }
 
     &_isSelected {
       background-image: url('../../assets/images/selected.svg');

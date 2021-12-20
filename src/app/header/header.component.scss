@@ -22,13 +22,24 @@
   }
 
   &__link {
+    text-decoration: none;
     margin: 0;
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
+    color: black;
+    transition: color 1s ease-in;
+
+    &:hover {
+      color: rgb(182, 154, 204);
+    }
 
     &:last-of-type {
       margin-left: 15px;
+    }
+
+    &_active {
+      font-weight: 600;
     }
   }
 }

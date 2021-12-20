@@ -21,7 +21,7 @@
     <tbody class="books__body">
       <tr class="book" *ngFor="let book of books | booksFilter: searchString; let i = index">
         <td class="book__position">{{i + 1}}</td>
-        <td class="book__info">
+        <td class="book__info" (click)="openBookDetail(book.isbn13)">
           <img class="book__image" src={{book.image}} alt="Обложка книги"/>
           <div class="book__about">
             <h2 class="book__title">{{book.title}}</h2>

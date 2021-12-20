@@ -36,4 +36,8 @@ export class BookListComponent implements OnInit {
     this.booksService.onSortDownPrice(books)
   }
 
+  openBookDetail(isbn13: string) {
+    console.log(isbn13);
+  }
+
 }
