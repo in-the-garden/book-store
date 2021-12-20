@@ -1,12 +1,12 @@
 .books {
-  padding: 20px 100px;
+  padding: 20px 40px;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &__table {
-    width: 100%;
+    min-width: 100%;
     box-sizing: border-box;
     background: rgb(182, 154, 204);
   }

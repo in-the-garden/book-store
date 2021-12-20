@@ -5,21 +5,21 @@
         <th class="books__head-name">#</th>
         <th class="books__head-name">Title
           <div class="books__filters">
-            <button class="books__filter" (click)="sortUpTitle()">&#5169;</button>
-            <button class="books__filter" (click)="sortDownTitle()">&#5167;</button>
+            <button class="books__filter" (click)="sortUpTitle(books)">&#5169;</button>
+            <button class="books__filter" (click)="sortDownTitle(books)">&#5167;</button>
           </div>
         </th>
         <th class="books__head-name">Price
           <div class="books__filters">
-            <button class="books__filter" (click)="sortUpPrice()">&#5169;</button>
-            <button class="books__filter" (click)="sortDownPrice()">&#5167;</button>
+            <button class="books__filter" (click)="sortUpPrice(books)">&#5169;</button>
+            <button class="books__filter" (click)="sortDownPrice(books)">&#5167;</button>
           </div>
         </th>
         <th class="books__head-name">Buy</th>
       </tr>
     </thead>
     <tbody class="books__body">
-      <tr class="book" *ngFor="let book of booksService.books; let i = index">
+      <tr class="book" *ngFor="let book of books; let i = index">
         <td class="book__position">{{i + 1}}</td>
         <td class="book__info">
           <img class="book__image" src={{book.image}} alt="Обложка книги"/>
