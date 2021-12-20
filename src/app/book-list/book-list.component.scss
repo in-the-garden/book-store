@@ -1,6 +1,9 @@
 .books {
   padding: 20px 100px;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &__table {
     width: 100%;
@@ -9,6 +12,7 @@
   }
 
   &__head-name {
+    max-height: 50px;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
@@ -17,7 +21,35 @@
     &:nth-of-type(2) {
       padding-left: 20px;
       text-align: start;
+      position: relative;
     }
+
+    &:nth-of-type(3) {
+      padding-left: 10px;
+      text-align: start;
+      min-width: 100px;
+      position: relative;
+    }
+  }
+
+  &__filters {
+    position: absolute;
+    top: 5px;
+    left: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+  }
+
+  &__filter {
+    box-sizing: border-box;
+    width: 15px;
+    height: 20px;
+    outline: none;
+    border: none;
+    padding: 0;
+    object-fit: cover;
   }
 }
 

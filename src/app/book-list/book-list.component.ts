@@ -8,6 +8,7 @@ import { BookListService } from '../shared/book-list.service';
   styleUrls: ['./book-list.component.scss']
 })
 export class BookListComponent implements OnInit {
+  public loading: boolean = true
 
   constructor(public booksService: BookListService) { }
 
@@ -15,8 +16,29 @@ export class BookListComponent implements OnInit {
     this.booksService.fetchBooks()
       .pipe(delay(500))
       .subscribe(() => {
+        this.loading = false
         console.log(this.booksService.books)
       })
+  }
+
+  toggleBook(isbn13: string) {
+    this.booksService.onToggle(isbn13)
+  }
+
+  sortUpTitle() {
+    this.booksService.onSortUpTitle()
+  }
+
+  sortDownTitle() {
+    this.booksService.onSortDownTitle()
+  }
+
+  sortUpPrice() {
+    this.booksService.onSortUpPrice()
+  }
+
+  sortDownPrice() {
+    this.booksService.onSortDownPrice()
   }
 
 }

@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PreloaderComponent } from './preloader/preloader.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BookListComponent
+    BookListComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
