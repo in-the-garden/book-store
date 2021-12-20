@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { delay } from 'rxjs';
 import { BookListService } from '../shared/book-list.service';
 
@@ -9,6 +9,7 @@ import { BookListService } from '../shared/book-list.service';
 })
 export class MainComponent implements OnInit {
   public loading: boolean = true
+  public searchString: string = ''
 
   constructor(public booksService: BookListService) { }
 
@@ -17,7 +18,6 @@ export class MainComponent implements OnInit {
       .pipe(delay(500))
       .subscribe(() => {
         this.loading = false
-        console.log(this.booksService.books)
       })
   }
 

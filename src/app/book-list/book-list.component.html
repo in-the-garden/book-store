@@ -19,7 +19,7 @@
       </tr>
     </thead>
     <tbody class="books__body">
-      <tr class="book" *ngFor="let book of books; let i = index">
+      <tr class="book" *ngFor="let book of books | booksFilter: searchString; let i = index">
         <td class="book__position">{{i + 1}}</td>
         <td class="book__info">
           <img class="book__image" src={{book.image}} alt="Обложка книги"/>

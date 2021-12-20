@@ -7,14 +7,12 @@ import { Book, BookListService } from '../shared/book-list.service';
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss']
 })
-export class BookListComponent implements OnInit, DoCheck {
+export class BookListComponent implements OnInit {
   @Input() books: Book[] = []
   @Input() loading: boolean = true
+  @Input() searchString: string = ''
 
   constructor(public booksService: BookListService) { }
-  ngDoCheck(): void {
-    console.log(this.books);
-  }
 
   ngOnInit() { }
 

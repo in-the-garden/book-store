@@ -8,6 +8,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { MainComponent } from './main/main.component';
 import { ShopComponent } from './shop/shop.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { BooksFilterPipe } from './shared/books-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,13 @@ import { ShopComponent } from './shop/shop.component';
     BookListComponent,
     PreloaderComponent,
     MainComponent,
-    ShopComponent
+    ShopComponent,
+    BooksFilterPipe
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule
+    [BrowserModule, FormsModule],
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

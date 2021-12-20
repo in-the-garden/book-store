@@ -1,4 +1,4 @@
-<main>
-  <p>Search...</p>
-  <app-book-list [books]="booksService.books" [loading]="loading"></app-book-list>
-</main>
+<div class="main">
+  <input class="main__search" type="text" placeholder="Search..." [(ngModel)]="searchString">
+  <app-book-list [books]="booksService.books" [loading]="loading" [searchString]="searchString"></app-book-list>
+</div>
