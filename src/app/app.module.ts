@@ -11,6 +11,7 @@ import { ShopComponent } from './shop/shop.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BooksFilterPipe } from './shared/books-filter.pipe';
+import { BookItemComponent } from './book-item/book-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BooksFilterPipe } from './shared/books-filter.pipe';
     PreloaderComponent,
     MainComponent,
     ShopComponent,
-    BooksFilterPipe
+    BooksFilterPipe,
+    BookItemComponent
   ],
   imports: [
     [BrowserModule, FormsModule],

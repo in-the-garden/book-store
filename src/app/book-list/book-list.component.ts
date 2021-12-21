@@ -16,10 +16,6 @@ export class BookListComponent implements OnInit {
 
   ngOnInit() { }
 
-  toggleBook(isbn13: string) {
-    this.booksService.onToggle(isbn13)
-  }
-
   sortUpTitle(books: Book[]) {
     this.booksService.onSortUpTitle(books)
   }
@@ -34,10 +30,6 @@ export class BookListComponent implements OnInit {
 
   sortDownPrice(books: Book[]) {
     this.booksService.onSortDownPrice(books)
-  }
-
-  openBookDetail(isbn13: string) {
-    console.log(isbn13);
   }
 
 }

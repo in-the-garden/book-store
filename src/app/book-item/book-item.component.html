@@ -1,0 +1,16 @@
+<article class="book" *ngFor="let book of books | booksFilter: searchString; let i = index">
+  <div class="book__position">{{i + 1}}</div>
+  <div class="book__info" (click)="openBookDetail(book.isbn13)">
+    <img class="book__image" src={{book.image}} alt="Обложка книги"/>
+    <div class="book__about">
+      <h2 class="book__title">{{book.title}}</h2>
+      <p class="book__description">{{book.subtitle}}</p>
+    </div>
+  </div>
+  <div class="book__price">{{book.price}}</div>
+  <div class="book__btn-container">
+    <button class="book__btn"
+      [class.book__btn_isSelected]="book.selected"
+      (click)="toggleBook(book.isbn13)"></button>
+  </div>
+</article>

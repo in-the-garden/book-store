@@ -1,0 +1,112 @@
+.book {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid rgb(182, 154, 204);
+
+  &__position {
+    min-width: 40px;
+    height: 180px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgb(182, 154, 204);
+    border-right: 1px solid rgb(182, 154, 204);
+  }
+
+  &__info {
+    max-width: max-content;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 150px;
+    height: 180px;
+    object-position: center;
+    object-fit: cover;
+  }
+
+  &__about {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+  }
+
+  &__description {
+    margin: 10px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  &__price {
+    width: 100px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgb(182, 154, 204);
+  }
+
+  &__btn-container {
+    width: 60px;
+    height: 180px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid rgb(182, 154, 204);
+    border-right: 1px solid rgb(182, 154, 204);
+  }
+
+  &__btn {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    background-image: url('../../assets/images/add-btn.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: opacity 1s ease-in;
+
+    &:hover {
+      cursor: pointer;
+      opacity: .6;
+    }
+
+    &_isSelected {
+      background-image: url('../../assets/images/selected.svg');
+    }
+  }
+}
