@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { BooksFilterPipe } from './shared/books-filter.pipe';
 import { BookItemComponent } from './book-item/book-item.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BookDetailsComponent } from './book-details/book-details.component';
     ShopComponent,
     BooksFilterPipe,
     BookItemComponent,
-    BookDetailsComponent
+    BookDetailsComponent,
+    HomeComponent
   ],
   imports: [
     [BrowserModule, FormsModule],
