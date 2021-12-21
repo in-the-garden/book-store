@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Book, BookListService } from '../shared/book-list.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class BookItemComponent implements OnInit {
   @Input() loading: boolean = true
   @Input() searchString: string = ''
 
-  constructor(public booksService: BookListService) { }
+  constructor(public booksService: BookListService, private route: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,7 +21,20 @@ export class BookItemComponent implements OnInit {
     this.booksService.onToggle(isbn13)
   }
 
-  openBookDetail(isbn13: string) {
-    console.log(isbn13);
+  openBookDetail(book: Book) {
+    this.route.navigate(
+      ['/books', book.isbn13],
+      {
+        queryParams: {
+          'title': book.title,
+          'subtitle': book.subtitle,
+          'isbn13': book.isbn13,
+          'price': book.price,
+          'image': book.image,
+          'url': book.url,
+          'selected': book.selected
+        }
+      }
+    );
   }
 }

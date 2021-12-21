@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { BooksFilterPipe } from './shared/books-filter.pipe';
 import { BookItemComponent } from './book-item/book-item.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { BookItemComponent } from './book-item/book-item.component';
     MainComponent,
     ShopComponent,
     BooksFilterPipe,
-    BookItemComponent
+    BookItemComponent,
+    BookDetailsComponent
   ],
   imports: [
     [BrowserModule, FormsModule],
