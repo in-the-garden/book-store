@@ -46,15 +46,11 @@ export class BookListService {
 
     if (!this.selectedBooks.includes(this.books[idx])) {
       this.addBookToShop(idx)
+      this.total = parseFloat((this.total + Number(this.books[idx].price.slice(1))).toFixed(2))
     } else {
       this.removeBook(isbn13)
+      this.total = parseFloat((this.total - Number(this.books[idx].price.slice(1))).toFixed(2))
     }
-  }
-
-  getSum() {
-    this.selectedBooks.forEach(book => {
-      return this.total = parseFloat((this.total + Number(book.price.slice(1))).toFixed(2))
-    })
   }
 
   sortArray(a: Book, b: Book) {

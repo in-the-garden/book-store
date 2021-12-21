@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Book, BookListService } from '../shared/book-list.service';
+import { BookListService } from '../shared/book-list.service';
 
 @Component({
   selector: 'app-shop',
@@ -11,8 +11,6 @@ export class ShopComponent implements OnInit {
 
   constructor(public booksService: BookListService) { }
 
-  ngOnInit(): void {
-    this.booksService.getSum();
-  }
+  ngOnInit(): void { }
 
 }
